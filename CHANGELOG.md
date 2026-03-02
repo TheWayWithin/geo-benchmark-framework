@@ -5,6 +5,13 @@ All notable changes to the GEO Benchmark Framework will be documented in this fi
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.2] - 2026-03-02
+
+### Fixed
+- **Model identifiers verified against OpenRouter** — 2 IDs updated to match available models
+  - `google/gemini-3-pro` → `google/gemini-3-pro-preview` (stable ID not yet available on OpenRouter)
+  - `x-ai/grok-4` → `x-ai/grok-4.1-fast` (grok-4 not yet available on OpenRouter)
+
 ## [1.0.1] - 2026-03-02
 
 ### Changed
@@ -17,8 +24,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 |------|----------------|------------|-----------|
 | OpenAI | GPT-4o | GPT-5.2 | Frontier upgrade |
 | Anthropic | Claude Sonnet 4.6 | Claude Opus 4.6 | Most powerful Anthropic model |
-| Google | Gemini 2.0 Flash | Gemini 3 Pro | Stable frontier (not preview) |
-| Slot 4 | Command R+ (Cohere) | Grok 4 (xAI) | Unique X/Twitter training data relevant to web content |
+| Google | Gemini 2.0 Flash | Gemini 3 Pro Preview | Stable frontier (preview — stable ID unavailable) |
+| Slot 4 | Command R+ (Cohere) | Grok 4.1 Fast (xAI) | Unique X/Twitter training data relevant to web content |
 | Slot 5 | Llama 3.1 405B (Meta) | DeepSeek V3.2 | Geographic diversity (China) + open-source frontier |
 | Mistral | Mistral Large (latest) | Mistral Large 3 (2512) | Version-pinned EU provider |
 

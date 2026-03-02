@@ -6,8 +6,8 @@
 # Principles: Frontier-capability, provider diversity (US, EU, China), architectural
 # diversity (dense, MoE), and a mix of open and closed models.
 #
-# All models are specified with stable, non-preview identifiers where possible
-# and are accessed via OpenRouter (https://openrouter.ai).
+# All models use verified OpenRouter identifiers as of 2026-03-02.
+# Accessed via OpenRouter (https://openrouter.ai).
 
 - provider: OpenAI
   model_identifier: openai/gpt-5.2
@@ -22,14 +22,14 @@
   is_active: true
 
 - provider: Google
-  model_identifier: google/gemini-3-pro
-  display_name: Gemini 3 Pro
+  model_identifier: google/gemini-3-pro-preview
+  display_name: Gemini 3 Pro Preview
   timeout_ms: 30000
   is_active: true
 
 - provider: xAI
-  model_identifier: x-ai/grok-4
-  display_name: Grok 4
+  model_identifier: x-ai/grok-4.1-fast
+  display_name: Grok 4.1 Fast
   timeout_ms: 45000
   is_active: true
 
