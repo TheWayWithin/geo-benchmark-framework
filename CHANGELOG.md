@@ -5,6 +5,23 @@ All notable changes to the GEO Benchmark Framework will be documented in this fi
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.1] - 2026-03-02
+
+### Changed
+- **Model panel upgraded to v1.3** — all 6 models replaced with frontier versions
+  - Determined via cross-analysis of 7 independent LLM evaluations
+  - Optimized for provider diversity (US, EU, China), architectural diversity (dense, MoE), and stability (no preview models)
+
+### Model Panel Changes
+| Slot | Previous (v1.0) | New (v1.3) | Rationale |
+|------|----------------|------------|-----------|
+| OpenAI | GPT-4o | GPT-5.2 | Frontier upgrade |
+| Anthropic | Claude Sonnet 4.6 | Claude Opus 4.6 | Most powerful Anthropic model |
+| Google | Gemini 2.0 Flash | Gemini 3 Pro | Stable frontier (not preview) |
+| Slot 4 | Command R+ (Cohere) | Grok 4 (xAI) | Unique X/Twitter training data relevant to web content |
+| Slot 5 | Llama 3.1 405B (Meta) | DeepSeek V3.2 | Geographic diversity (China) + open-source frontier |
+| Mistral | Mistral Large (latest) | Mistral Large 3 (2512) | Version-pinned EU provider |
+
 ## [1.0.0] - 2026-03-02
 
 ### Added
