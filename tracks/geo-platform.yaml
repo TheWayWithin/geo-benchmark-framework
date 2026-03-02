@@ -1,0 +1,78 @@
+# GEO Benchmark Framework — GEO Platform Track
+#
+# This track defines which scoring dimensions apply to tools in the
+# "Generative Engine Optimization Platform" category. All 51 dimensions
+# from methodology v1.0 are included.
+
+slug: geo-platform
+name: GEO Platform Track
+description: >
+  Comprehensive assessment of tools that help websites appear in AI-generated
+  search results. Covers 51 dimensions across 6 categories: AI Search
+  Visibility, Content Optimization, Technical Implementation, Analytics &
+  Reporting, User Experience, and Market & Value.
+methodology_version: "1.0"
+
+dimension_slugs:
+  # AI Search Visibility (8)
+  - ai-citation-frequency
+  - ai-citation-accuracy
+  - ai-citation-prominence
+  - multi-model-visibility
+  - query-coverage-breadth
+  - brand-mention-detection
+  - source-attribution-quality
+  - conversational-query-handling
+
+  # Content Optimization (9)
+  - content-structure-analysis
+  - semantic-relevance-scoring
+  - entity-recognition-quality
+  - content-gap-identification
+  - readability-optimization
+  - answer-engine-formatting
+  - topic-authority-building
+  - content-freshness-signals
+  - multimodal-content-support
+
+  # Technical Implementation (9)
+  - schema-markup-support
+  - llms-txt-generation
+  - structured-data-validation
+  - api-quality-documentation
+  - integration-ecosystem
+  - performance-impact
+  - implementation-complexity
+  - crawlability-optimization
+  - ai-agent-accessibility
+
+  # Analytics & Reporting (8)
+  - ai-search-analytics-depth
+  - competitive-benchmarking
+  - reporting-customization
+  - data-export-capabilities
+  - historical-trend-tracking
+  - alert-notification-system
+  - roi-attribution
+  - cross-platform-analytics
+
+  # User Experience (8)
+  - dashboard-usability
+  - onboarding-experience
+  - documentation-quality
+  - workflow-efficiency
+  - multi-user-collaboration
+  - mobile-accessibility
+  - error-handling-guidance
+  - customization-flexibility
+
+  # Market & Value (9)
+  - pricing-transparency
+  - value-for-investment
+  - vendor-transparency
+  - update-frequency
+  - support-responsiveness
+  - scalability
+  - community-ecosystem
+  - contract-flexibility
+  - training-education-resources

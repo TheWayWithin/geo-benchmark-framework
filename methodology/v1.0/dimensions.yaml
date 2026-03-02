@@ -1,0 +1,862 @@
+# GEO Benchmark Framework — Scoring Dimensions v1.0
+#
+# 51 dimensions across 6 categories.
+# Weights within the framework sum to 1.0000.
+# Each dimension includes 2-3 evaluation prompts used by the AI consensus panel.
+#
+# Schema:
+#   slug:          URL-safe identifier (unique)
+#   name:          Human-readable name
+#   category:      One of 6 scoring categories
+#   weight:        Decimal weight (0-1); all weights sum to 1.0
+#   display_order: Integer for consistent ordering
+#   prompts:       Array of 2-3 evaluation prompts
+
+# ═══════════════════════════════════════════════════════════════
+# Category: AI Search Visibility (8 dimensions, weight: 0.22)
+# ═══════════════════════════════════════════════════════════════
+
+- slug: ai-citation-frequency
+  name: AI Citation Frequency
+  category: AI Search Visibility
+  weight: 0.04
+  display_order: 1
+  prompts:
+    - >
+      How frequently does this tool help websites get cited in AI-generated
+      responses across major AI assistants (ChatGPT, Perplexity, Gemini,
+      Claude)? Evaluate the breadth of monitoring coverage and the tool's
+      ability to increase citation rates.
+    - >
+      Assess this tool's capability to track and improve how often a website
+      appears as a cited source in AI search results. Consider both monitoring
+      frequency and actionable optimization features.
+    - >
+      Evaluate the tool's AI citation tracking depth: Does it monitor citation
+      frequency across multiple AI platforms? Does it provide benchmarks
+      against competitors? Can it demonstrate improvement over time?
+
+- slug: ai-citation-accuracy
+  name: AI Citation Accuracy
+  category: AI Search Visibility
+  weight: 0.04
+  display_order: 2
+  prompts:
+    - >
+      How accurately does this tool track whether AI-generated citations
+      correctly represent the source content? Evaluate its ability to detect
+      misattributions, hallucinated citations, and factual errors in AI
+      responses.
+    - >
+      Assess this tool's capability to verify that AI citations are faithful
+      to the original content. Consider detection of misquotes, context
+      distortion, and attribution errors.
+    - >
+      Evaluate the accuracy of this tool's citation tracking: Does it validate
+      that AI mentions are factually correct? Can it flag when AI systems
+      misrepresent source material?
+
+- slug: ai-citation-prominence
+  name: AI Citation Prominence
+  category: AI Search Visibility
+  weight: 0.03
+  display_order: 3
+  prompts:
+    - >
+      How well does this tool help optimize for prominent placement in
+      AI-generated responses (e.g., being cited first, appearing in featured
+      snippets, or being the primary recommended source)? Evaluate positioning
+      optimization capabilities.
+    - >
+      Assess this tool's ability to track and improve citation prominence —
+      not just being cited, but being cited prominently (top position, primary
+      recommendation, featured source).
+
+- slug: multi-model-visibility
+  name: Multi-Model Visibility
+  category: AI Search Visibility
+  weight: 0.03
+  display_order: 4
+  prompts:
+    - >
+      How comprehensively does this tool track visibility across different AI
+      models and platforms (GPT, Claude, Gemini, Perplexity, Copilot, etc.)?
+      Evaluate cross-platform monitoring breadth.
+    - >
+      Assess this tool's multi-model tracking: Does it cover all major AI
+      search platforms? Can it identify platform-specific optimization
+      opportunities? Does it normalize data across models?
+    - >
+      Evaluate the tool's ability to provide a unified view of brand
+      visibility across multiple AI engines, with comparative analytics and
+      platform-specific recommendations.
+
+- slug: query-coverage-breadth
+  name: Query Coverage Breadth
+  category: AI Search Visibility
+  weight: 0.03
+  display_order: 5
+  prompts:
+    - >
+      How broad is this tool's query monitoring? Does it track performance
+      across informational, navigational, transactional, and conversational
+      query types in AI search? Evaluate query taxonomy breadth.
+    - >
+      Assess this tool's coverage of diverse query patterns: long-tail
+      queries, voice-style questions, multi-turn conversations, and
+      intent-based categories. How comprehensive is the monitoring?
+
+- slug: brand-mention-detection
+  name: Brand Mention Detection
+  category: AI Search Visibility
+  weight: 0.02
+  display_order: 6
+  prompts:
+    - >
+      How effectively does this tool detect brand mentions in AI-generated
+      responses, including indirect references, competitor comparisons, and
+      category mentions? Evaluate detection sensitivity and accuracy.
+    - >
+      Assess this tool's brand monitoring in AI outputs: Can it find direct
+      mentions, implied references, and comparative mentions? Does it track
+      sentiment alongside detection?
+    - >
+      Evaluate brand mention detection scope: Does the tool monitor branded
+      and unbranded queries? Can it detect mentions in multi-turn
+      conversations and follow-up responses?
+
+- slug: source-attribution-quality
+  name: Source Attribution Quality
+  category: AI Search Visibility
+  weight: 0.02
+  display_order: 7
+  prompts:
+    - >
+      How well does this tool evaluate and improve source attribution quality
+      — ensuring that when AI systems cite a website, the attribution includes
+      proper links, context, and credit? Evaluate attribution optimization
+      features.
+    - >
+      Assess this tool's capability to analyze how AI systems attribute
+      sources: Does it track link quality, citation formatting, and whether
+      attributions drive traffic back to the original source?
+
+- slug: conversational-query-handling
+  name: Conversational Query Handling
+  category: AI Search Visibility
+  weight: 0.01
+  display_order: 8
+  prompts:
+    - >
+      How effectively does this tool optimize content for conversational AI
+      queries — multi-turn dialogues, follow-up questions, and natural
+      language interactions? Evaluate conversational SEO features.
+    - >
+      Assess this tool's support for conversational query optimization: Does
+      it help structure content for Q&A formats, dialogue patterns, and the
+      way users interact with AI assistants?
+
+# ═══════════════════════════════════════════════════════════════
+# Category: Content Optimization (9 dimensions, weight: 0.20)
+# ═══════════════════════════════════════════════════════════════
+
+- slug: content-structure-analysis
+  name: Content Structure Analysis
+  category: Content Optimization
+  weight: 0.03
+  display_order: 9
+  prompts:
+    - >
+      How thoroughly does this tool analyze content structure for AI
+      readability? Evaluate its assessment of heading hierarchy, paragraph
+      organization, list usage, and overall document architecture for AI
+      consumption.
+    - >
+      Assess this tool's content structure analysis: Does it evaluate HTML
+      semantics, heading depth, content chunking, and structural signals that
+      help AI systems understand and extract information?
+    - >
+      Evaluate the tool's ability to audit and recommend structural
+      improvements that make content more parseable by AI systems, including
+      section organization, data formatting, and information hierarchy.
+
+- slug: semantic-relevance-scoring
+  name: Semantic Relevance Scoring
+  category: Content Optimization
+  weight: 0.03
+  display_order: 10
+  prompts:
+    - >
+      How accurately does this tool score content for semantic relevance to
+      target topics and queries? Evaluate its NLP/embedding-based analysis
+      capabilities versus simple keyword matching.
+    - >
+      Assess the depth of semantic analysis: Does the tool use modern NLP
+      techniques (embeddings, topic modeling) to evaluate content relevance,
+      or rely on basic keyword density metrics?
+    - >
+      Evaluate semantic scoring sophistication: Can the tool identify topical
+      gaps, semantic relationships between concepts, and content
+      comprehensiveness relative to the knowledge domain?
+
+- slug: entity-recognition-quality
+  name: Entity Recognition Quality
+  category: Content Optimization
+  weight: 0.02
+  display_order: 11
+  prompts:
+    - >
+      How well does this tool identify and leverage named entities (people,
+      organizations, places, concepts) within content? Evaluate entity
+      extraction accuracy and its application to content optimization.
+    - >
+      Assess entity recognition capabilities: Does the tool identify
+      entities, map relationships between them, suggest entity enrichment,
+      and connect to knowledge graphs?
+
+- slug: content-gap-identification
+  name: Content Gap Identification
+  category: Content Optimization
+  weight: 0.02
+  display_order: 12
+  prompts:
+    - >
+      How effectively does this tool identify content gaps — topics,
+      questions, and subtopics that competitors cover but the target site
+      doesn't? Evaluate gap analysis comprehensiveness.
+    - >
+      Assess content gap detection: Does the tool analyze competitor content,
+      AI-generated answers, and search intent data to reveal missing topics
+      and underserved user needs?
+    - >
+      Evaluate the tool's content gap methodology: Is it based on keyword
+      gaps only, or does it incorporate semantic analysis, question mining,
+      and AI-answer coverage analysis?
+
+- slug: readability-optimization
+  name: Readability Optimization
+  category: Content Optimization
+  weight: 0.02
+  display_order: 13
+  prompts:
+    - >
+      How effectively does this tool optimize content readability for both
+      human readers and AI systems? Evaluate readability scoring,
+      simplification suggestions, and accessibility recommendations.
+    - >
+      Assess readability optimization features: Does the tool provide
+      actionable suggestions for sentence structure, vocabulary level, and
+      formatting that improve both user engagement and AI comprehension?
+
+- slug: answer-engine-formatting
+  name: Answer Engine Formatting
+  category: Content Optimization
+  weight: 0.02
+  display_order: 14
+  prompts:
+    - >
+      How well does this tool optimize content specifically for AI answer
+      engines — formatting content so it's more likely to be selected and
+      quoted in AI-generated responses?
+    - >
+      Assess answer engine optimization: Does the tool help format content as
+      concise answers, structured data, FAQ blocks, and direct response
+      formats that AI systems prefer?
+    - >
+      Evaluate the tool's ability to structure content for featured snippets,
+      People Also Ask, and AI answer panels — including paragraph answers,
+      table formats, and step-by-step lists.
+
+- slug: topic-authority-building
+  name: Topic Authority Building
+  category: Content Optimization
+  weight: 0.02
+  display_order: 15
+  prompts:
+    - >
+      How effectively does this tool help build topical authority through
+      content clustering, pillar-page strategies, and comprehensive topic
+      coverage recommendations?
+    - >
+      Assess topic authority features: Does the tool map topic clusters,
+      recommend internal linking for authority signals, and track topical
+      coverage depth relative to competitors?
+
+- slug: content-freshness-signals
+  name: Content Freshness Signals
+  category: Content Optimization
+  weight: 0.02
+  display_order: 16
+  prompts:
+    - >
+      How well does this tool manage content freshness — identifying stale
+      content, recommending update schedules, and ensuring freshness signals
+      are properly communicated to AI systems?
+    - >
+      Assess content freshness management: Does the tool track content age,
+      monitor for accuracy decay, suggest update priorities, and help
+      implement freshness metadata?
+    - >
+      Evaluate freshness signal capabilities: Can the tool detect when AI
+      systems are using outdated information from the site and recommend
+      content refreshes accordingly?
+
+- slug: multimodal-content-support
+  name: Multimodal Content Support
+  category: Content Optimization
+  weight: 0.02
+  display_order: 17
+  prompts:
+    - >
+      How effectively does this tool optimize multimodal content (images,
+      videos, audio, infographics) for AI search visibility? Evaluate alt
+      text optimization, video transcript analysis, and visual content
+      recommendations.
+    - >
+      Assess multimodal support: Does the tool analyze non-text content
+      formats, optimize image metadata, evaluate video content for AI
+      comprehension, and recommend multimodal content strategies?
+
+# ═══════════════════════════════════════════════════════════════
+# Category: Technical Implementation (9 dimensions, weight: 0.18)
+# ═══════════════════════════════════════════════════════════════
+
+- slug: schema-markup-support
+  name: Schema Markup Support
+  category: Technical Implementation
+  weight: 0.03
+  display_order: 18
+  prompts:
+    - >
+      How comprehensive is this tool's schema markup support? Evaluate the
+      range of schema types supported, ease of implementation, validation
+      capabilities, and advanced markup features.
+    - >
+      Assess schema markup features: Does the tool support JSON-LD
+      generation, schema validation, rich result testing, and advanced types
+      (FAQ, HowTo, Product, Organization)?
+    - >
+      Evaluate schema implementation quality: Can the tool generate, deploy,
+      and monitor schema markup at scale? Does it support nested schemas and
+      knowledge graph integration?
+
+- slug: llms-txt-generation
+  name: llms.txt Generation
+  category: Technical Implementation
+  weight: 0.02
+  display_order: 19
+  prompts:
+    - >
+      How well does this tool support the llms.txt standard — generating,
+      validating, and maintaining AI-readable site documentation files that
+      help AI systems understand site content?
+    - >
+      Assess llms.txt capabilities: Does the tool auto-generate llms.txt
+      files, keep them updated with site changes, and validate compliance
+      with the standard?
+    - >
+      Evaluate llms.txt tooling: Can the tool create comprehensive llms.txt
+      content that covers site structure, key pages, content summaries, and
+      API documentation in AI-friendly formats?
+
+- slug: structured-data-validation
+  name: Structured Data Validation
+  category: Technical Implementation
+  weight: 0.02
+  display_order: 20
+  prompts:
+    - >
+      How thoroughly does this tool validate structured data implementation?
+      Evaluate testing against Google's rich result requirements, AI-specific
+      structured data, and cross-platform compatibility.
+    - >
+      Assess structured data validation: Does the tool detect errors,
+      warnings, and opportunities in existing markup? Can it validate against
+      multiple schema specifications?
+
+- slug: api-quality-documentation
+  name: API Quality & Documentation
+  category: Technical Implementation
+  weight: 0.02
+  display_order: 21
+  prompts:
+    - >
+      How well-designed and documented is this tool's API? Evaluate endpoint
+      coverage, authentication methods, rate limiting, error handling, and
+      documentation quality (OpenAPI spec, examples, SDKs).
+    - >
+      Assess API quality: Is the API RESTful/GraphQL? Does it have
+      comprehensive documentation, versioning, webhook support, and
+      sandbox/testing environments?
+    - >
+      Evaluate the developer experience: Are there code examples, client
+      libraries, clear authentication flows, and responsive API support?
+
+- slug: integration-ecosystem
+  name: Integration Ecosystem
+  category: Technical Implementation
+  weight: 0.02
+  display_order: 22
+  prompts:
+    - >
+      How extensive is this tool's integration ecosystem? Evaluate native
+      integrations (CMS, analytics, CI/CD), API extensibility, webhook
+      support, and marketplace/plugin availability.
+    - >
+      Assess integration breadth: Does the tool connect with major platforms
+      (WordPress, Shopify, HubSpot, Google Analytics, Search Console) and
+      support custom integrations?
+
+- slug: performance-impact
+  name: Performance Impact
+  category: Technical Implementation
+  weight: 0.02
+  display_order: 23
+  prompts:
+    - >
+      What is this tool's impact on site performance? Evaluate whether it
+      adds client-side scripts, affects page load times, or introduces
+      rendering overhead. Consider both positive optimization features and
+      negative performance costs.
+    - >
+      Assess performance characteristics: Does the tool operate server-side
+      or client-side? Does it affect Core Web Vitals? Are there performance
+      optimization recommendations built in?
+
+- slug: implementation-complexity
+  name: Implementation Complexity
+  category: Technical Implementation
+  weight: 0.02
+  display_order: 24
+  prompts:
+    - >
+      How complex is this tool to implement and maintain? Evaluate the
+      onboarding process, technical requirements, learning curve, and ongoing
+      maintenance burden for different team sizes.
+    - >
+      Assess implementation ease: Can non-technical users get value quickly?
+      What's the technical ceiling for advanced usage? How much ongoing
+      technical maintenance is required?
+
+- slug: crawlability-optimization
+  name: Crawlability Optimization
+  category: Technical Implementation
+  weight: 0.02
+  display_order: 25
+  prompts:
+    - >
+      How effectively does this tool optimize site crawlability for both
+      traditional search engine bots and AI crawlers? Evaluate robots.txt
+      management, sitemap optimization, and crawl budget recommendations.
+    - >
+      Assess crawlability features: Does the tool manage crawl directives,
+      monitor crawl patterns from AI bots (GPTBot, ClaudeBot, etc.), and
+      optimize for efficient content discovery?
+
+- slug: ai-agent-accessibility
+  name: AI Agent Accessibility
+  category: Technical Implementation
+  weight: 0.01
+  display_order: 26
+  prompts:
+    - >
+      How well does this tool prepare content for AI agent access — making
+      information available to AI systems that browse, extract, and
+      synthesize web content on behalf of users?
+    - >
+      Assess AI agent readiness: Does the tool optimize for machine-readable
+      formats, API endpoints for content access, and compatibility with AI
+      browsing agents?
+
+# ═══════════════════════════════════════════════════════════════
+# Category: Analytics & Reporting (8 dimensions, weight: 0.14)
+# ═══════════════════════════════════════════════════════════════
+
+- slug: ai-search-analytics-depth
+  name: AI Search Analytics Depth
+  category: Analytics & Reporting
+  weight: 0.03
+  display_order: 27
+  prompts:
+    - >
+      How deep are this tool's AI search analytics? Evaluate the breadth of
+      metrics tracked (impressions, citations, sentiment, traffic from AI
+      sources), data granularity, and analysis capabilities.
+    - >
+      Assess analytics depth: Does the tool track AI-specific metrics beyond
+      traditional SEO? Can it attribute traffic from AI assistants? Does it
+      provide insight into AI search behavior patterns?
+    - >
+      Evaluate analytical sophistication: Does the tool offer segmentation,
+      cohort analysis, and predictive analytics specifically for AI search
+      performance?
+
+- slug: competitive-benchmarking
+  name: Competitive Benchmarking
+  category: Analytics & Reporting
+  weight: 0.02
+  display_order: 28
+  prompts:
+    - >
+      How effectively does this tool benchmark performance against
+      competitors in AI search? Evaluate competitive tracking features,
+      share-of-voice metrics, and competitive gap analysis.
+    - >
+      Assess competitive analysis: Can the tool track competitors' AI search
+      visibility, compare citation rates, and identify competitive advantages
+      and threats in the AI search landscape?
+
+- slug: reporting-customization
+  name: Reporting Customization
+  category: Analytics & Reporting
+  weight: 0.02
+  display_order: 29
+  prompts:
+    - >
+      How customizable are this tool's reporting capabilities? Evaluate
+      template flexibility, white-labeling, scheduled reports, dashboard
+      customization, and stakeholder-appropriate views.
+    - >
+      Assess reporting features: Can reports be customized for different
+      audiences (C-suite, SEO team, content team)? Are there automated
+      scheduling, PDF export, and interactive dashboards?
+
+- slug: data-export-capabilities
+  name: Data Export Capabilities
+  category: Analytics & Reporting
+  weight: 0.01
+  display_order: 30
+  prompts:
+    - >
+      How robust are this tool's data export capabilities? Evaluate supported
+      formats (CSV, JSON, API), bulk export, automated data pipelines, and
+      data warehouse integration.
+    - >
+      Assess data portability: Can users export raw data, connect to BI
+      tools, set up automated data feeds, and maintain data ownership?
+
+- slug: historical-trend-tracking
+  name: Historical Trend Tracking
+  category: Analytics & Reporting
+  weight: 0.02
+  display_order: 31
+  prompts:
+    - >
+      How well does this tool track and visualize historical trends in AI
+      search performance? Evaluate data retention periods, trend analysis
+      features, and ability to correlate changes with events.
+    - >
+      Assess historical data: How far back does data go? Can users overlay
+      events (algorithm updates, content changes) on trend charts? Is there
+      forecasting based on historical patterns?
+
+- slug: alert-notification-system
+  name: Alert & Notification System
+  category: Analytics & Reporting
+  weight: 0.01
+  display_order: 32
+  prompts:
+    - >
+      How effective is this tool's alert and notification system? Evaluate
+      alerting on ranking changes, citation drops, competitor movements, and
+      anomaly detection capabilities.
+    - >
+      Assess alerting features: Does the tool provide real-time
+      notifications, customizable thresholds, multi-channel delivery (email,
+      Slack, webhook), and intelligent anomaly detection?
+
+- slug: roi-attribution
+  name: ROI Attribution
+  category: Analytics & Reporting
+  weight: 0.02
+  display_order: 33
+  prompts:
+    - >
+      How well does this tool attribute ROI to AI search optimization
+      efforts? Evaluate revenue tracking, conversion attribution, and ability
+      to connect AI visibility to business outcomes.
+    - >
+      Assess ROI measurement: Can the tool track the revenue impact of AI
+      search visibility? Does it provide cost-per-citation, value-per-mention,
+      and optimization ROI metrics?
+
+- slug: cross-platform-analytics
+  name: Cross-Platform Analytics
+  category: Analytics & Reporting
+  weight: 0.01
+  display_order: 34
+  prompts:
+    - >
+      How well does this tool unify analytics across platforms — traditional
+      search, AI search, social, and referral channels? Evaluate
+      cross-platform data integration and holistic performance views.
+    - >
+      Assess cross-platform capabilities: Does the tool aggregate data from
+      Google Search Console, AI platform APIs, analytics tools, and social
+      platforms into a unified dashboard?
+
+# ═══════════════════════════════════════════════════════════════
+# Category: User Experience (8 dimensions, weight: 0.13)
+# ═══════════════════════════════════════════════════════════════
+
+- slug: dashboard-usability
+  name: Dashboard Usability
+  category: User Experience
+  weight: 0.02
+  display_order: 35
+  prompts:
+    - >
+      How usable is this tool's dashboard? Evaluate layout clarity,
+      information hierarchy, navigation intuitiveness, visual design quality,
+      and ability to surface actionable insights quickly.
+    - >
+      Assess dashboard UX: Can users find key metrics quickly? Is the
+      interface cluttered or clean? Does it guide users toward high-impact
+      actions? Is it responsive across devices?
+
+- slug: onboarding-experience
+  name: Onboarding Experience
+  category: User Experience
+  weight: 0.02
+  display_order: 36
+  prompts:
+    - >
+      How effective is this tool's onboarding experience? Evaluate the setup
+      wizard, initial data import, guided tours, time-to-first-value, and
+      support during the initial learning period.
+    - >
+      Assess onboarding quality: How long does it take a new user to see
+      value? Are there interactive tutorials, template projects, and progress
+      indicators?
+    - >
+      Evaluate first-run experience: Does the tool help users connect data
+      sources, set goals, and understand key features within the first
+      session?
+
+- slug: documentation-quality
+  name: Documentation Quality
+  category: User Experience
+  weight: 0.02
+  display_order: 37
+  prompts:
+    - >
+      How comprehensive and useful is this tool's documentation? Evaluate
+      coverage (API docs, user guides, tutorials, FAQs), searchability,
+      freshness, and practical example quality.
+    - >
+      Assess documentation: Is it well-organized, regularly updated, and
+      accessible to different skill levels? Are there video tutorials, code
+      examples, and troubleshooting guides?
+
+- slug: workflow-efficiency
+  name: Workflow Efficiency
+  category: User Experience
+  weight: 0.02
+  display_order: 38
+  prompts:
+    - >
+      How efficiently does this tool support common workflows? Evaluate task
+      completion speed, batch operations, keyboard shortcuts, automation
+      features, and elimination of repetitive manual steps.
+    - >
+      Assess workflow design: Can users complete common tasks (audit a page,
+      optimize content, generate a report) with minimal clicks? Are there
+      templates, presets, and automation rules?
+
+- slug: multi-user-collaboration
+  name: Multi-User Collaboration
+  category: User Experience
+  weight: 0.01
+  display_order: 39
+  prompts:
+    - >
+      How well does this tool support multi-user collaboration? Evaluate team
+      workspaces, role-based access, shared dashboards, commenting, task
+      assignment, and approval workflows.
+    - >
+      Assess collaboration features: Can teams work simultaneously? Are there
+      audit logs, permission levels, and shared project spaces?
+
+- slug: mobile-accessibility
+  name: Mobile Accessibility
+  category: User Experience
+  weight: 0.02
+  display_order: 40
+  prompts:
+    - >
+      How accessible is this tool on mobile devices? Evaluate responsive
+      design, mobile app availability, touch interaction quality, and feature
+      parity with the desktop experience.
+    - >
+      Assess mobile experience: Can users monitor performance, review alerts,
+      and access key data on mobile? Is it a responsive web app or native
+      mobile app?
+
+- slug: error-handling-guidance
+  name: Error Handling & Guidance
+  category: User Experience
+  weight: 0.01
+  display_order: 41
+  prompts:
+    - >
+      How well does this tool handle errors and guide users through problems?
+      Evaluate error messages, recovery suggestions, contextual help, and
+      graceful degradation.
+    - >
+      Assess error UX: When something goes wrong, does the tool explain what
+      happened, suggest fixes, and prevent data loss? Are error messages
+      actionable?
+
+- slug: customization-flexibility
+  name: Customization Flexibility
+  category: User Experience
+  weight: 0.01
+  display_order: 42
+  prompts:
+    - >
+      How flexible is this tool's customization? Evaluate dashboard
+      configuration, metric selection, workflow customization, and ability to
+      adapt the tool to specific business needs.
+    - >
+      Assess customization depth: Can users create custom metrics, build
+      custom dashboards, define custom scoring rubrics, and tailor the tool
+      to their industry vertical?
+
+# ═══════════════════════════════════════════════════════════════
+# Category: Market & Value (9 dimensions, weight: 0.13)
+# ═══════════════════════════════════════════════════════════════
+
+- slug: pricing-transparency
+  name: Pricing Transparency
+  category: Market & Value
+  weight: 0.02
+  display_order: 43
+  prompts:
+    - >
+      How transparent is this tool's pricing? Evaluate whether pricing is
+      publicly available, clearly structured, and free of hidden fees.
+      Consider clarity of plan tiers, overage charges, and contract terms.
+    - >
+      Assess pricing clarity: Is pricing published on the website? Are
+      feature differences between tiers clear? Are there surprise charges for
+      data usage, API calls, or user seats?
+
+- slug: value-for-investment
+  name: Value for Investment
+  category: Market & Value
+  weight: 0.02
+  display_order: 44
+  prompts:
+    - >
+      How does this tool's value proposition compare to its price point?
+      Evaluate feature depth relative to cost, ROI potential, and whether the
+      tool justifies its price for its target market segment.
+    - >
+      Assess value delivery: Does the tool provide capabilities that justify
+      its cost? How does the price-to-feature ratio compare to alternatives?
+      Is there a clear ROI pathway?
+
+- slug: vendor-transparency
+  name: Vendor Transparency
+  category: Market & Value
+  weight: 0.01
+  display_order: 45
+  prompts:
+    - >
+      How transparent is the vendor about their product, practices, and
+      roadmap? Evaluate public roadmap availability, changelog transparency,
+      data handling policies, and communication openness.
+    - >
+      Assess vendor openness: Does the vendor publish a product roadmap? Are
+      they transparent about data usage, AI model sources, and product
+      limitations?
+
+- slug: update-frequency
+  name: Update Frequency
+  category: Market & Value
+  weight: 0.02
+  display_order: 46
+  prompts:
+    - >
+      How frequently is this tool updated with new features and improvements?
+      Evaluate release cadence, feature development velocity, and
+      responsiveness to user feedback and market changes.
+    - >
+      Assess product evolution: How often are meaningful updates released?
+      Does the vendor adapt quickly to AI search landscape changes? Is there
+      a visible innovation trajectory?
+
+- slug: support-responsiveness
+  name: Support Responsiveness
+  category: Market & Value
+  weight: 0.01
+  display_order: 47
+  prompts:
+    - >
+      How responsive and effective is this tool's customer support? Evaluate
+      response times, support channel availability (chat, email, phone),
+      knowledge base quality, and resolution rates.
+    - >
+      Assess support quality: How quickly do support tickets get resolved? Is
+      there 24/7 support? Are there dedicated account managers for enterprise
+      customers? Is the knowledge base comprehensive?
+
+- slug: scalability
+  name: Scalability
+  category: Market & Value
+  weight: 0.02
+  display_order: 48
+  prompts:
+    - >
+      How well does this tool scale with growing business needs? Evaluate
+      performance under increasing data volumes, multi-site management,
+      enterprise-grade features, and infrastructure reliability.
+    - >
+      Assess scalability: Can the tool handle 1,000+ pages? 100,000+
+      keywords? Multiple domains? Enterprise-scale data volumes without
+      performance degradation?
+
+- slug: community-ecosystem
+  name: Community & Ecosystem
+  category: Market & Value
+  weight: 0.01
+  display_order: 49
+  prompts:
+    - >
+      How vibrant is this tool's community and ecosystem? Evaluate user
+      community size, third-party integrations, educational content,
+      conferences/events, and ecosystem partner network.
+    - >
+      Assess community strength: Is there an active user community (forums,
+      Slack, Discord)? Are there third-party plugins, certified partners, and
+      community-contributed resources?
+
+- slug: contract-flexibility
+  name: Contract Flexibility
+  category: Market & Value
+  weight: 0.01
+  display_order: 50
+  prompts:
+    - >
+      How flexible are this tool's contract terms? Evaluate monthly vs.
+      annual options, cancellation policies, downgrade paths, and negotiation
+      openness for enterprise deals.
+    - >
+      Assess contract terms: Can users try before committing? Are there
+      month-to-month options? What are the cancellation and downgrade
+      policies?
+
+- slug: training-education-resources
+  name: Training & Education Resources
+  category: Market & Value
+  weight: 0.01
+  display_order: 51
+  prompts:
+    - >
+      How comprehensive are this tool's training and education resources?
+      Evaluate onboarding training, certification programs, webinars,
+      tutorials, and ongoing education content.
+    - >
+      Assess educational investment: Does the vendor offer structured
+      training programs? Are there certifications, regular webinars, and a
+      learning academy?
