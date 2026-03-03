@@ -16,14 +16,14 @@
   is_active: true
 
 - provider: Anthropic
-  model_identifier: anthropic/claude-opus-4.6
-  display_name: Claude Opus 4.6
+  model_identifier: anthropic/claude-sonnet-4.6
+  display_name: Claude Sonnet 4.6
   timeout_ms: 30000
   is_active: true
 
 - provider: Google
-  model_identifier: google/gemini-3-pro-preview
-  display_name: Gemini 3 Pro Preview
+  model_identifier: google/gemini-3-flash-preview
+  display_name: Gemini 3 Flash
   timeout_ms: 30000
   is_active: true
 

@@ -5,6 +5,14 @@ All notable changes to the GEO Benchmark Framework will be documented in this fi
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.3] - 2026-03-02
+
+### Changed
+- **Cost-optimized model panel** — 2 models swapped for better cost/quality ratio
+  - `anthropic/claude-opus-4.6` → `anthropic/claude-sonnet-4.6` (Sonnet sufficient for rubric-based scoring, ~60-70% cost reduction)
+  - `google/gemini-3-pro-preview` → `google/gemini-3-flash-preview` (Flash "thinking" model, ~80-90% cost reduction)
+  - Panel quality maintained: both replacements are frontier-class for structured evaluation tasks
+
 ## [1.0.2] - 2026-03-02
 
 ### Fixed
